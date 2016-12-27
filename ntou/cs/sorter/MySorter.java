@@ -22,4 +22,10 @@ public class MySorter
 		d[k] = d[s];
 		d[s] = temp;
 	}
+
+
+	 public static void main(String[] args){
+
+	}
+
 }
