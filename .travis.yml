@@ -13,13 +13,7 @@ notifications:
         on_success: always 
         on_failure: always 
 
-
-before_install:
-    - "cpanm Mojo::UserAgent"
-    - "cpanm Test::More"
-    - "cpanm Devel::Cover::Report::Coveralls"
 script:
-      perl Makefile.PL && make test && cover -test -report coveralls
     - javac -d . -cp junit-4.12.jar *.java
     - java ntou.cs.sorter.MySorterMain
     - java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore ntou.cs.sorter.MySorterTest
